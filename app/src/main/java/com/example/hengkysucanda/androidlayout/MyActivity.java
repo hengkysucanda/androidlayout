@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 public class MyActivity extends Activity {
@@ -12,6 +15,19 @@ public class MyActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
+        ArrayList<Data> arrayList = new ArrayList<Data>();
+
+
+        for (int i=0; i< 10;i++) {
+            Data data = new Data();
+            data.setTitle("Tes"+i);
+            data.setImageURL("tes/tes"+i);
+            data.setDescription("Ini pertama"+i);
+            arrayList.add(data);
+        }
+        ListView myList = (ListView) findViewById(R.id.listView_something);
+         MyAdapter adapter = new MyAdapter(this, arrayList);
+        myList.setAdapter(adapter);
     }
 
 

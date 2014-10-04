@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+
+    <color name="blue_color">#1098e4</color>
+    <color name="red_color">#f26154</color>
+    <color name="green_color">#51ba47</color>
+
+
     <string name="app_name">AndroidLayout</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
